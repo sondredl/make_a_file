@@ -21,29 +21,30 @@
             <div class="col-8 slider" style="background-color: pink;">
                 <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
                 <span>Value:</span>
-                <!-- <input id="demo" style="font-weight: bold"></input> -->
-                <span id="demo" style="font-weight: bold"></span>
+                <!-- <span id="demo" style="font-weight: bold"></span> -->
+                <!-- <input type="range" min="1" max="100" value="50" class="slider" id="myRange"> -->
+                </br>
+                <input id="demo-input" style="font-weight: bold"></input>
             </div>
 
             <div class="col-2 timer" style="background-color: red;">
             </div>
         </div>
     </div>
-    <!-- <div id="myRange" class="slidecontainer">
-        <p>Default range slider:</p>
-        <input type="range" min="1" max="100" value="50">
-        <span>Value:</span>
-        <span id="demo"></span>
-    </div> -->
 
 </body>
 <script>
     var slider = document.getElementById("myRange");
-    var output = document.getElementById("demo");
-    output.innerHTML = slider.value;
+    // var output = document.getElementById("demo");
+    var userInput = document.getElementById("demo-input");
+    // output.innerHTML = slider.value;
+    userInput.value = slider.value;
 
-    slider.oninput = function () {
-        output.innerHTML = this.value;
+    // slider.oninput = function () {
+    //     output.innerHTML = this.value;
+    // }
+    userInput.oninput = function () {
+        slider.value = this.value;
     }
 </script>
 
