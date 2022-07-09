@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="fcu-3">
+    <div>
+        <!-- <div class="fcu-3"> -->
+        <div class="row">
+            <div class="col-2 timer" style="background-color: blue;">
+                sadfasdf
+            </div>
+            <div class="col-8 slider" style="background-color: pink;">
+                asdfasdf
+                <p>Custom range slider:</p>
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <span>Value:</span>
+                <span id="demo" style="font-weight: bold"></span>
+            </div>
+            <div class="col-2 timer" style="background-color: red;">
+                sfasdf
+            </div>
+        </div>
+    </div>
+    <!-- <div id="myRange" class="slidecontainer">
+        <p>Default range slider:</p>
+        <input type="range" min="1" max="100" value="50">
+        <span>Value:</span>
+        <span id="demo"></span>
+    </div> -->
+
+</body>
+<script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function () {
+        output.innerHTML = this.value;
+    }
+</script>
+
+</html>
