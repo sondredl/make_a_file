@@ -19,9 +19,16 @@
             </div>
 
             <div class="col-8 slider" style="background-color: pink;">
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                <span>Value:</span>
-                <input id="demo-input" style="font-weight: bold"></input>
+                <input type="range" min="1" max="100" value="50" class="slider-one" id="myRangeOne">
+                <input type="range" min="1" max="100" value="50" class="slider-two" id="myRangeTwo">
+                <input type="range" min="1" max="100" value="50" class="slider-three" id="myRangeThree">
+
+                <span>Value green:</span>
+                <input class="input" id="demo-input-one" style="font-weight: bold"></input>
+                <span>Value red:</span>
+                <input class="input" id="demo-input-two" style="font-weight: bold"></input>
+                <span>Value black:</span>
+                <input class="input" id="demo-input-three" style="font-weight: bold"></input>
             </div>
 
             <div class="col-2 timer" style="background-color: red;">
@@ -31,12 +38,26 @@
 
 </body>
 <script>
-    var slider = document.getElementById("myRange");
-    var userInput = document.getElementById("demo-input");
-    userInput.value = slider.value;
+    var sliderOne = document.getElementById("myRangeOne");
+    var sliderTwo = document.getElementById("myRangeTwo");
+    var sliderThree = document.getElementById("myRangeThree");
 
-    userInput.oninput = function () {
-        slider.value = this.value;
+    var userInputOne = document.getElementById("demo-input-one");
+    var userInputTwo = document.getElementById("demo-input-two");
+    var userInputThree = document.getElementById("demo-input-three");
+
+    userInputOne.value = sliderOne.value;
+    userInputTwo.value = sliderTwo.value;
+    userInputThree.value = sliderThree.value;
+
+    userInputOne.oninput = function () {
+        sliderOne.value = this.value;
+    }
+    userInputTwo.oninput = function () {
+        sliderTwo.value = this.value;
+    }
+    userInputThree.oninput = function () {
+        sliderThree.value = this.value;
     }
 </script>
 
