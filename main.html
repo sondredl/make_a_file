@@ -12,8 +12,8 @@
     .new-timeline {
         padding-left: 10px;
         height: 30px;
-        background-color: white;
-        border: solid black 1px;
+        /* background-color: white; */
+        /* border: solid black 1px; */
     }
 
     .times {}
@@ -28,11 +28,13 @@
         </div>
         <div class="col-8">
             <div class="new-timeline">
+                <!-- <div class="new-timeline" id="timelineID"> -->
+                <p id="timelineID" class="newer-timeline"></p>
             </div>
         </div>
         <div class="col-2 times">
             end hh.mm
-            <input class="input" id="endTime" type="number" value="36.00">
+            <input class="input" id="endTime" type="number" value="6.00">
             </input>
         </div>
     </div>
@@ -64,24 +66,35 @@
 <script>
     var endID = document.getElementById("endTime");
     var startID = document.getElementById("startTime");
-    // var start = (document.getElementById("startTime")).value;
-    // var end = (document.getElementById("endTime")).value;
-    // var time = end - start;
 
+    var timeline = document.getElementById("timelineID");
+
+    // document.getElementById("timelineID").className = 'cssClass';
 
     startID.oninput = function () {
         var start = (document.getElementById("startTime")).value;
         var end = (document.getElementById("endTime")).value;
         time = end - start;
         console.log("new start time, gametime: " + time);
+        newStyle();
+
     }
     endID.oninput = function () {
-        // var start = (document.getElementById("startTime")).value;
         var start = startID.value;
-        // var end = (document.getElementById("endTime")).value;
         var end = endID.value;
         time = end - start;
         console.log("new end time, gametime: " + time);
+        newStyle();
+    }
+
+    timeline.onload = function () {
+        var style = document.createElement("style");
+        style.type = "text/css";
+        style.innerHTML = ".newer-timelineID { background-color: black; border: solid black 1px;}";
+
+        var timeline = document.getElementById("timelineID");
+        timeline.style;
+        document.getElementsByTagName("head")[0].appendChild(style);
     }
 
 </script>
