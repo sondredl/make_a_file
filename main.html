@@ -9,14 +9,12 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <style>
-    .new-timeline {
+    /* .new-timeline {
         padding-left: 10px;
         height: 30px;
-        /* background-color: white; */
-        /* border: solid black 1px; */
-    }
-
-    .times {}
+        background-color: white;
+        border: solid black 1px;
+    } */
 </style>
 
 <body>
@@ -29,7 +27,7 @@
         <div class="col-8">
             <div class="new-timeline">
                 <!-- <div class="new-timeline" id="timelineID"> -->
-                <p id="timelineID" class="newer-timeline"></p>
+                <div id="timelineID" class="newer-timeline"></div>
             </div>
         </div>
         <div class="col-2 times">
@@ -38,7 +36,7 @@
             </input>
         </div>
     </div>
-    <div class="row row-timeline">
+    <!-- <div class="row row-timeline">
         <div class="col-2 timer">
         </div>
         <div class="col-8 container" style="background-color: pink;">
@@ -59,42 +57,31 @@
         <br>
         <span class="registration">cmd:</span>
         <input class="input" id="commandInputID" style="font-weight: bold"></input>
-    </div>
-    </div>
+    </div> -->
 </body>
-<script src="./main.js"></script>
+<!-- <script src="./main.js"></script> -->
 <script>
-    var endID = document.getElementById("endTime");
-    var startID = document.getElementById("startTime");
-
-    var timeline = document.getElementById("timelineID");
-
-    // document.getElementById("timelineID").className = 'cssClass';
-
-    startID.oninput = function () {
-        var start = (document.getElementById("startTime")).value;
-        var end = (document.getElementById("endTime")).value;
-        time = end - start;
-        console.log("new start time, gametime: " + time);
-        newStyle();
-
-    }
-    endID.oninput = function () {
-        var start = startID.value;
-        var end = endID.value;
-        time = end - start;
-        console.log("new end time, gametime: " + time);
-        newStyle();
+    onload = function () {
+        generateHtml();
+        genereateCss();
     }
 
-    timeline.onload = function () {
+    genereateCss = function () {
+
+    }
+
+    generateHtml = function (time) {
         var style = document.createElement("style");
         style.type = "text/css";
-        style.innerHTML = ".newer-timelineID { background-color: black; border: solid black 1px;}";
-
+        style.innerHTML = ".newer-timelineID { background-color: black; border: solid black 10px;}";
+        var html_str = "js generated html string";
         var timeline = document.getElementById("timelineID");
-        timeline.style;
-        document.getElementsByTagName("head")[0].appendChild(style);
+        timeline.append(html_str);
+
+        // document.getElementById("timelineID").append(style);
+        // document.getElementById("timelineID").append(str);
+        // timeline.append(style);
+        // console.log(style);
     }
 
 </script>
