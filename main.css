@@ -21,8 +21,15 @@
   flex-wrap: wrap;
   -ms-flex-wrap: wrap; 
 }
---col-8-width var(width: 66.66667%;) 
 
+.row-timeline{
+  border: solid red 1px;
+  height: 100px;
+}
+.row-border{
+  border: solid pink 1px;
+  /* height: 50px; */
+}
 
 .fcu-3{
     width: 1200px;
@@ -33,6 +40,8 @@
     height: 180px;
 } */
 .registration{
+  position: relative;
+  /* padding-top: 50px; */
   margin-left: 25px;
 }
 /* .container{
@@ -47,6 +56,7 @@
     -webkit-appearance: none;
     height: 25px;
     background-color: blueviolet;
+    margin-bottom: 50px;
 }
 .triangleDown::-webkit-slider-thumb {
   -webkit-appearance: none;

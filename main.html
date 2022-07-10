@@ -14,27 +14,26 @@
 <body>
     <div>
         <!-- <div class="fcu-3"> -->
-        <div class="row">
-            <div class="col-3 timer">
-                <span class="registration">down arrow:</span>
-                <input class="input" id="demo-input-one" style="font-weight: bold"></input>
-                <br>
-                <span class="registration">up arrow:</span>
-                <input class="input" id="inputID" style="font-weight: bold"></input>
-                <br>
-                <span class="registration">command:</span>
-                <input class="input" id="commandInputID" style="font-weight: bold"></input>
+        <div class="row row-timeline">
+            <div class="col-2 timer">
             </div>
-
             <div class="col-8 container" style="background-color: pink;">
                 <input type="range" min="1" max="100" value="50" class="triangleDown" id="myRangeOne">
                 <input type="range" min="1" max="100" value="50" class="triangleUp" id="sliderID">
                 <input type="range" min="1" max="100" value="50" class="command" id="commandID">
-
-
             </div>
-            <div class="col-1" style="background-color: grey;"></div>
-
+            <div class="col-2" style="background-color: grey;"></div>
+        </div>
+        <div class="row row-border">
+            <div class="col-12"></div>
+            <span class="registration">down:</span>
+            <input class="input" id="demo-input-one" style="font-weight: bold"></input>
+            <br>
+            <span class="registration">up:</span>
+            <input class="input" id="inputID" style="font-weight: bold"></input>
+            <br>
+            <span class="registration">cmd:</span>
+            <input class="input" id="commandInputID" style="font-weight: bold"></input>
         </div>
     </div>
 </body>
