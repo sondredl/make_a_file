@@ -18,17 +18,20 @@
             <div class="col-2 timer" style="background-color: blue;">
             </div>
 
-            <div class="col-8 slider" style="background-color: pink;">
-                <input type="range" min="1" max="100" value="50" class="slider-one" id="myRangeOne">
-                <input type="range" min="1" max="100" value="50" class="slider-two" id="myRangeTwo">
-                <input type="range" min="1" max="100" value="50" class="slider-three" id="myRangeThree">
+            <div class="col-8 slidercontainer" style="background-color: pink;">
+                <!-- <input type="range" min="1" max="100" value="50" class="slider-one" id="myRangeOne"> -->
+                <!-- <input type="range" min="1" max="100" value="50" class="slider-two" id="myRangeTwo">
+                <input type="range" min="1" max="100" value="50" class="slider-three" id="myRangeThree"> -->
 
-                <span>Value green:</span>
-                <input class="input" id="demo-input-one" style="font-weight: bold"></input>
-                <span>Value red:</span>
+                <!-- <span>Value green:</span>
+                <input class="input" id="demo-input-one" style="font-weight: bold"></input> -->
+                <!-- <span>Value red:</span>
                 <input class="input" id="demo-input-two" style="font-weight: bold"></input>
                 <span>Value black:</span>
-                <input class="input" id="demo-input-three" style="font-weight: bold"></input>
+                <input class="input" id="demo-input-three" style="font-weight: bold"></input> -->
+                <input type="range" min="1" max="100" value="50" class="slider-one" id="myRange">
+                <!-- <span>value:</span> -->
+                <p>Value: <span id="demo"></span></p>
             </div>
 
             <div class="col-2 timer" style="background-color: red;">
@@ -37,6 +40,17 @@
     </div>
 
 </body>
+<script>
+
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value; // Display the default slider value
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider.oninput = function () {
+        output.innerHTML = this.value;
+    }
+</script>
 <script>
     var sliderOne = document.getElementById("myRangeOne");
     var sliderTwo = document.getElementById("myRangeTwo");
