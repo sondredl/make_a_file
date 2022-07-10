@@ -6,7 +6,7 @@
     <title>CSS Template</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <!-- <body class="fcu-3"> -->
@@ -18,15 +18,17 @@
             <div class="col-2 timer" style="background-color: blue;">
             </div>
 
-            <div class="col-8 slider" style="background-color: pink;">
+            <div class="col-8 container" style="background-color: pink;">
                 <input type="range" min="1" max="100" value="50" class="slider-one" id="myRangeOne">
                 <input type="range" min="1" max="100" value="50" class="slider-two" id="myRangeTwo">
                 <input type="range" min="1" max="100" value="50" class="slider-three" id="myRangeThree">
 
                 <span>Value green:</span>
                 <input class="input" id="demo-input-one" style="font-weight: bold"></input>
+
                 <span>Value red:</span>
                 <input class="input" id="demo-input-two" style="font-weight: bold"></input>
+
                 <span>Value black:</span>
                 <input class="input" id="demo-input-three" style="font-weight: bold"></input>
             </div>
@@ -34,30 +36,49 @@
             <div class="col-2 timer" style="background-color: red;">
             </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="col-2 timer" style="background-color: red;"> </div>
+            <div class="col-8 container" style="background-color: pink;">
+                <input type="range" min="1" max="100" value="30" class="triangle" id="sliderID">
 
+                <span>Value triangle:</span>
+                <input class="triangleInput" id="inputID" style="font-weight: bold"></input>
+            </div>
+            <div class="col-2 timer" style="background-color: blue;"> </div>
+        </div>
+    </div>
 </body>
 <script>
     var sliderOne = document.getElementById("myRangeOne");
     var sliderTwo = document.getElementById("myRangeTwo");
     var sliderThree = document.getElementById("myRangeThree");
+    var sliderTriangle = document.getElementById("sliderID");
 
     var userInputOne = document.getElementById("demo-input-one");
     var userInputTwo = document.getElementById("demo-input-two");
     var userInputThree = document.getElementById("demo-input-three");
+    var userInput = document.getElementById("inputID");
 
     userInputOne.value = sliderOne.value;
     userInputTwo.value = sliderTwo.value;
     userInputThree.value = sliderThree.value;
+    userInput.innerHTML = sliderTriangle.value;
 
+    userInput.oninput = function () {
+        sliderTriangle.innerHTML = this.value;
+        console.log("triangle: " + sliderTriangle.value);
+    }
     userInputOne.oninput = function () {
         sliderOne.value = this.value;
+        console.log("first slider: " + sliderOne.value);
     }
     userInputTwo.oninput = function () {
         sliderTwo.value = this.value;
+        console.log("second slider: " + sliderTwo.value);
     }
     userInputThree.oninput = function () {
         sliderThree.value = this.value;
+        console.log("third slider: " + sliderThree.value);
     }
 </script>
 
