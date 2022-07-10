@@ -19,44 +19,33 @@
             </div>
 
             <div class="col-8 container" style="background-color: pink;">
-                <input type="range" min="1" max="100" value="50" class="slider-one" id="myRangeOne">
+                <input type="range" min="1" max="100" value="50" class="triangleDown" id="myRangeOne">
                 <span>slider one</span>
                 <input class="input" id="demo-input-one" style="font-weight: bold"></input>
 
+                <input type="range" min="1" max="100" value="30" class="triangleUp" id="sliderID">
+                <span>Value triangle:</span>
+                <input class="input" id="inputID" style="font-weight: bold"></input>
+
+                <input type="range" min="1" max="100" value="20" class="command" id="commandID">
+                <span>Value triangle:</span>
+                <input class="input" id="commandInputID" style="font-weight: bold"></input>
             </div>
 
             <div class="col-2 timer" style="background-color: red;">
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-2 timer" style="background-color: red;"> </div>
             <div class="col-8 container" style="background-color: pink;">
-                <input type="range" min="1" max="100" value="" class="triangle" id="sliderID">
+                <input type="range" min="1" max="100" value="30" class="triangleUp" id="sliderID">
                 <span>Value triangle:</span>
                 <input class="input" id="inputID" style="font-weight: bold"></input>
             </div>
             <div class="col-2 timer" style="background-color: blue;"> </div>
-        </div>
+        </div> -->
     </div>
 </body>
-<script>
-    var sliderOne = document.getElementById("myRangeOne");
-    var userInputOne = document.getElementById("demo-input-one");
-    userInputOne.value = sliderOne.value;
-
-    var sliderTriangle = document.getElementById("sliderID");
-    var userInputTriangle = document.getElementById("inputID");
-    userInputTriangle.value = sliderTriangle.value;
-
-    userInputTriangle.oninput = function () {
-        sliderTriangle.value = this.value;
-        console.log("userInputTriangle: " + userInputTriangle.value);
-        console.log("sliderTriangle: " + sliderTriangle.value);
-    }
-    userInputOne.oninput = function () {
-        sliderOne.value = this.value;
-        console.log("first slider: " + sliderOne.value);
-    }
-</script>
+<script src="./main.js"></script>
 
 </html>

@@ -37,7 +37,7 @@
 .slidecontainer {
   width: 100%;
 }
-.triangle {
+.triangleUp {
     width: 100%;
     -webkit-appearance: none;
     height: 25px;
@@ -47,7 +47,7 @@
     -webkit-transition: .2s;
     transition: opacity .2s;
 }
-.triangle::-webkit-slider-thumb {
+.triangleUp::-webkit-slider-thumb {
   -webkit-appearance: none;
   /* background: transparent; */
   width: 20px;
@@ -58,9 +58,46 @@
   border-bottom: solid 25px green;
   cursor: pointer;
 }
+.triangleDown {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 25px;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+.triangleDown::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 25px;
+  border-bottom: solid 0 transparent;
+  border-right: solid 10px transparent;
+  border-left: solid 10px transparent;
+  border-top: solid 25px green;
+  cursor: pointer;
+}
+.command {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 25px;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+.command::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 25px;
+  /* border-bottom: solid 0 transparent; */
+  border-right: solid 5px black;
+  /* border-left: solid 10px transparent;
+  border-top: solid 25px green; */
+  cursor: pointer;
+}
 
-.slider-one { width: 100%; }
-/* utseende */
+/* .slider-one { width: 100%; }
 .slider-one::-moz-range-thumb { 
   width: 25px;
   height: 25px;
@@ -78,7 +115,6 @@
   -webkit-transition: .2s;
   transition: opacity .2s;
 }
-/* utseende */
 .slider-two::-moz-range-thumb {
   width: 25px;
   height: 25px;
@@ -96,13 +132,12 @@
   -webkit-transition: .2s;
   transition: opacity .2s;
 }
-/* utseende */
 .slider-three::-moz-range-thumb {
   width: 25px;
   height: 25px;
   background: black;
   cursor: pointer;
-}
+} */
 
 .input {
     width: 50px;
