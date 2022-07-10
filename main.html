@@ -8,35 +8,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
 </head>
+<style>
+    .new-timeline {
+        padding-left: 10px;
+        height: 30px;
+        background-color: white;
+        border: solid black 1px;
+    }
 
-<!-- <body class="fcu-3"> -->
+    .times {}
+</style>
 
 <body>
-    <div>
-        <!-- <div class="fcu-3"> -->
-        <div class="row row-timeline">
-            <div class="col-2 timer">
-            </div>
-            <div class="col-8 container" style="background-color: pink;">
-                <input type="range" min="1" max="100" value="50" class="triangleDown" id="myRangeOne">
-                <input type="range" min="1" max="100" value="50" class="triangleUp" id="sliderID">
-                <input type="range" min="1" max="100" value="50" class="command" id="commandID">
-            </div>
-            <div class="col-2" style="background-color: grey;"></div>
+    <div class="row">
+        <div class="col-2 times">
+            start hh.mm
+            <input class="input" id="startTime" type="" value="00.00">
+            </input>
         </div>
-        <div class="row row-border">
-            <div class="col-12"></div>
-            <span class="registration">down:</span>
-            <input class="input" id="demo-input-one" style="font-weight: bold"></input>
-            <br>
-            <span class="registration">up:</span>
-            <input class="input" id="inputID" style="font-weight: bold"></input>
-            <br>
-            <span class="registration">cmd:</span>
-            <input class="input" id="commandInputID" style="font-weight: bold"></input>
+        <div class="col-8">
+            <div class="new-timeline">
+            </div>
         </div>
+        <div class="col-2 times">
+            end hh.mm
+            <input class="input" id="endTime" type="number" value="00.36">
+            </input>
+        </div>
+    </div>
+    <div class="row row-timeline">
+        <div class="col-2 timer">
+        </div>
+        <div class="col-8 container" style="background-color: pink;">
+            <input type="range" min="1" max="100" value="50" class="triangleDown" id="myRangeOne">
+            <input type="range" min="1" max="100" value="50" class="triangleUp" id="sliderID">
+            <input type="range" min="1" max="100" value="50" class="command" id="commandID">
+
+        </div>
+        <div class="col-2" style="background-color: grey;"></div>
+    </div>
+    <div class="row row-border">
+        <div class="col-12"></div>
+        <span class="registration">down:</span>
+        <input class="input" id="demo-input-one" style="font-weight: bold"></input>
+        <br>
+        <span class="registration">up:</span>
+        <input class="input" id="inputID" style="font-weight: bold"></input>
+        <br>
+        <span class="registration">cmd:</span>
+        <input class="input" id="commandInputID" style="font-weight: bold"></input>
+    </div>
     </div>
 </body>
 <script src="./main.js"></script>
+<script>
+    var field = document.getElementById("endTime");
+
+    field.oninput = function () {
+        var start = (document.getElementById("startTime")).value;
+        var end = (document.getElementById("endTime")).value;
+        time = end - start;
+        console.log("game time: " + time)
+    }
+</script>
 
 </html>
