@@ -28,24 +28,50 @@
     height: 800px;
     border: solid black 1px;
 }
-.timer{
-    height: 150px;
+/* .timer{
+    height: 180px;
+} */
+.registration{
+  margin-left: 25px;
 }
-.container{
-    height: 150px;
-}
+/* .container{
+    height: 180px;
+} */
 .slidecontainer {
   width: 100%;
 }
+.triangleDown {
+  position: absolute;
+    width: 100%;
+    -webkit-appearance: none;
+    height: 25px;
+    outline: none;
+    /* opacity: 0.7; */
+    /* -webkit-transition: .2s;
+    transition: opacity .2s; */
+    background-color: blueviolet;
+}
+.triangleDown::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 25px;
+  border-bottom: solid 0 transparent;
+  border-right: solid 10px transparent;
+  border-left: solid 10px transparent;
+  border-top: solid 25px green;
+  cursor: pointer;
+}
 .triangleUp {
+  position: absolute;
+  background-color: transparent;
     width: 100%;
     -webkit-appearance: none;
     height: 25px;
     /* background: #d3d3d3; */
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+    /* outline: none;
+    opacity: 0.7; */
+    /* -webkit-transition: .2s; */
+    /* transition: opacity .2s; */
 }
 .triangleUp::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -58,33 +84,15 @@
   border-bottom: solid 25px green;
   cursor: pointer;
 }
-.triangleDown {
-    width: 100%;
-    -webkit-appearance: none;
-    height: 25px;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-}
-.triangleDown::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 20px;
-  height: 25px;
-  border-bottom: solid 0 transparent;
-  border-right: solid 10px transparent;
-  border-left: solid 10px transparent;
-  border-top: solid 25px green;
-  cursor: pointer;
-}
 .command {
+  background-color: transparent;
     width: 100%;
     -webkit-appearance: none;
     height: 25px;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+    /* outline: none; */
+    opacity: 0.99;
+    /* -webkit-transition: .2s; */
+    /* transition: opacity .2s; */
 }
 .command::-webkit-slider-thumb {
   -webkit-appearance: none;
