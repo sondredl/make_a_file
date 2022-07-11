@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+</head>
+<style>
+    .menu {
+        /* background-color: aquamarine; */
+        /* background-image: url(arrow.jpg); */
+        /* image-resolution: 1000px; */
+        height: 400px;
+    }
+
+    /* .content {
+        background-color: bisque;
+    } */
+
+    button {
+        height: 50px;
+        width: 50px;
+        margin: 10px;
+    }
+</style>
+
+<body>
+    <div class="row">
+        <div id="menu" class="col-3 menu">
+            <ul>
+                <li>
+                    <button id="first-button" onclick="newColor()">
+                        first item
+                    </button>
+                </li>
+                <li>
+                    <button id="second-button" onclick="oldColor()">
+                        second item
+                    </button>
+                </li>
+                <li>
+                    <button id="third-button" onclick="newBackground()">
+                        third item
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div id="content" class="col-7 content">
+            <div>
+                <button id="btn-1">1</button>
+                <button id="btn-2">2</button>
+                <button id="btn-3">3</button>
+                <button id="btn-4">4</button>
+            </div>
+            <!-- <div>
+                <div id="timelineID" class="newer-timeline"></div>
+            </div> -->
+        </div>
+    </div>
+</body>
+<script>
+    let btn1 = document.querySelector('#btn-1');
+    let btn2 = document.querySelector('#btn-2');
+    let btn3 = document.querySelector('#btn-3');
+    let btn4 = document.querySelector('#btn-4');
+    btn1.addEventListener('click', () => {
+        document.body.style.backgroundImage = "url('arrow.jpg')";
+    });
+    btn2.addEventListener('click', () => {
+        document.body.style.backgroundImage = "url('arrow.jpg')";
+    });
+    btn3.addEventListener('click', () => {
+        document.body.style.backgroundImage = "url('arrow.jpg')";
+    });
+    btn4.addEventListener('click', () => {
+        document.body.style.backgroundImage = "url('https://i.imgur.com/mPKfD2J.jpg')";
+    });
+
+    // function newColor() {
+    window.onload = function () {
+        var menu = document.getElementById("menu");
+        menu.style["background-color"] = "red";
+        // menu.setAttribute("background-color", "aqua");
+    }
+    function newColor() {
+        var menu = document.getElementById("menu");
+        menu.style["background-color"] = "aqua";
+        // menu.setAttribute("background-color", "aqua");
+    }
+    function oldColor() {
+        var menu = document.getElementById("menu");
+        menu.style["background-color"] = "bisque";
+        // menu.setAttribute("background-color", "aqua");
+    }
+    function newBackground() {
+        var menu = document.getElementById("menu");
+        // menu.style["background-image"] = "arrow.jpg";
+        menu.style.backgroundImage = "url(arrow.jpg)";
+        // menu.style["background-image"] = "src('arrow.jpg')";
+        // background-image: url(arrow.jpg);
+        // menu.setAttribute("background-color", "aqua");
+    }
+
+</script>
+
+</html>
