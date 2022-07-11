@@ -5,60 +5,52 @@
     <title>CSS Template</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="background.css">
 </head>
-<style>
-    .menu {
-        /* background-color: aquamarine; */
-        /* background-image: url(arrow.jpg); */
-        /* image-resolution: 1000px; */
-        height: 400px;
-    }
-
-    /* .content {
-        background-color: bisque;
-    } */
-
-    button {
-        height: 50px;
-        width: 50px;
-        margin: 10px;
-    }
-</style>
 
 <body>
-    <div class="row">
-        <div id="menu" class="col-3 menu">
-            <ul>
-                <li>
-                    <button id="first-button" onclick="newColor()">
-                        first item
-                    </button>
-                </li>
-                <li>
-                    <button id="second-button" onclick="oldColor()">
-                        second item
-                    </button>
-                </li>
-                <li>
-                    <button id="third-button" onclick="newBackground()">
-                        third item
-                    </button>
-                </li>
-            </ul>
-        </div>
-        <div id="content" class="col-7 content">
-            <div>
-                <button id="btn-1">1</button>
-                <button id="btn-2">2</button>
-                <button id="btn-3">3</button>
-                <button id="btn-4">4</button>
+    <main>
+        <header>
+            header tex
+        </header>
+        <div class="row page-content">
+            <nav class="col-3">
+                <ul>
+                    <li>nav item</li>
+                    <li>nav item</li>
+                    <li>nav item</li>
+                </ul>
+            </nav>
+            <div class="col-9">
+                <ul>
+                    <li>
+                        <button id="first-button" onclick="newColor()">
+                            first item
+                        </button>
+                    </li>
+                    <li>
+                        <button id="second-button" onclick="oldColor()">
+                            second item
+                        </button>
+                    </li>
+                    <li>
+                        <button id="third-button" onclick="newBackground()">
+                            third item
+                        </button>
+                    </li>
+                </ul>
+                <div>
+                    <button id="btn-1">1</button>
+                    <button id="btn-2">2</button>
+                    <button id="btn-3">3</button>
+                    <button id="btn-4">4</button>
+                </div>
             </div>
-            <!-- <div>
-                <div id="timelineID" class="newer-timeline"></div>
-            </div> -->
         </div>
-    </div>
+        <footer>
+            CORE Training and simulation
+        </footer>
+    </main>
 </body>
 <script>
     let btn1 = document.querySelector('#btn-1');
