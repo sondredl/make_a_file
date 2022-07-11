@@ -8,6 +8,31 @@
     <link rel="stylesheet" href="background.css">
 </head>
 
+<style>
+    li {
+        margin: 10px;
+        background-color: blue;
+    }
+
+    #main-image {
+        height: 100px;
+        width: 100px;
+        background-color: black;
+    }
+
+    #secondary-image {
+        height: 150px;
+        width: 500px;
+        /* background-color: purple; */
+    }
+
+    /* .main-image {
+        height: 100px;
+        width: 100px;
+        background-color: black;
+    } */
+</style>
+
 <body>
     <main>
         <header>
@@ -16,12 +41,10 @@
         <div class="row page-content">
             <nav class="col-3">
                 <ul>
-                    <li>nav item</li>
-                    <li>nav item</li>
-                    <li>nav item</li>
+                    <li id="1" tabindex="1">nav item</li>
+                    <li id="2" tabindex="2">nav item</li>
+                    <li id="3" tabindex="3">nav item</li>
                 </ul>
-            </nav>
-            <div class="col-9">
                 <ul>
                     <li>
                         <button id="first-button" onclick="newColor()">
@@ -45,6 +68,14 @@
                     <button id="btn-3">3</button>
                     <button id="btn-4">4</button>
                 </div>
+            </nav>
+            <div class="col-9">
+                <div id="main-image">
+
+                </div>
+                <div id="secondary-image">
+
+                </div>
             </div>
         </div>
         <footer>
@@ -53,47 +84,80 @@
     </main>
 </body>
 <script>
-    let btn1 = document.querySelector('#btn-1');
-    let btn2 = document.querySelector('#btn-2');
-    let btn3 = document.querySelector('#btn-3');
-    let btn4 = document.querySelector('#btn-4');
-    btn1.addEventListener('click', () => {
-        document.body.style.backgroundImage = "url('arrow.jpg')";
+    let focusOne = document.getElementById("1");
+    let focusTwo = document.getElementById("2");
+    let focusThree = document.getElementById("3");
+
+    let targetArea = document.getElementById("main-image");
+
+    focusTwo.addEventListener('focus', (targetArea) => {
+        targetArea.target.style.backgroundColor = 'red';
+        colorChange(targetArea);
+    })
+    focusTwo.addEventListener('blur', (targetArea) => {
+        targetArea.target.style.backgroundColor = 'black';
+    })
+    function colorChange(element) {
+        console.log(targetArea.id)
+        element.target.style.backgroundColor = 'red';
+
+    }
+
+    var secondTarget = document.getElementById('secondary-image');
+    focusOne.addEventListener('focus', () => {
+        onFocus(secondTarget);
     });
-    btn2.addEventListener('click', () => {
-        document.body.style.backgroundImage = "url('arrow.jpg')";
-    });
-    btn3.addEventListener('click', () => {
-        document.body.style.backgroundImage = "url('arrow.jpg')";
-    });
-    btn4.addEventListener('click', () => {
-        document.body.style.backgroundImage = "url('https://i.imgur.com/mPKfD2J.jpg')";
+    focusOne.addEventListener('blur', () => {
+        deFocus(secondTarget);
     });
 
-    // function newColor() {
-    window.onload = function () {
-        var menu = document.getElementById("menu");
-        menu.style["background-color"] = "red";
-        // menu.setAttribute("background-color", "aqua");
+    function onFocus(element) {
+        console.log(element.id)
+        element.style.backgroundImage = "url(arrow.jpg)";
     }
-    function newColor() {
-        var menu = document.getElementById("menu");
-        menu.style["background-color"] = "aqua";
-        // menu.setAttribute("background-color", "aqua");
+    function deFocus(element) {
+        // console.log(element.id)
+        element.style.backgroundImage = "none";
     }
-    function oldColor() {
-        var menu = document.getElementById("menu");
-        menu.style["background-color"] = "bisque";
-        // menu.setAttribute("background-color", "aqua");
-    }
-    function newBackground() {
-        var menu = document.getElementById("menu");
+
+    // function newBackground() {
+    //     var menu = document.getElementById("menu");
         // menu.style["background-image"] = "arrow.jpg";
-        menu.style.backgroundImage = "url(arrow.jpg)";
+        // menu.style.backgroundImage = "url(arrow.jpg)";
         // menu.style["background-image"] = "src('arrow.jpg')";
         // background-image: url(arrow.jpg);
         // menu.setAttribute("background-color", "aqua");
-    }
+    // }
+
+    // let btn2 = document.querySelector('#btn-2');
+    // let btn3 = document.querySelector('#btn-3');
+    // let btn4 = document.querySelector('#btn-4');
+    // btn2.addEventListener('click', () => {
+    //     document.body.style.backgroundImage = "url('arrow.jpg')";
+    // });
+    // btn3.addEventListener('click', () => {
+    //     document.body.style.backgroundImage = "url('arrow.jpg')";
+    // });
+    // btn4.addEventListener('click', () => {
+    //     document.body.style.backgroundImage = "url('https://i.imgur.com/mPKfD2J.jpg')";
+    // });
+
+    // function newColor() {
+    // window.onload = function () {
+    //     var menu = document.getElementById("menu");
+    //     menu.style["background-color"] = "red";
+        // menu.setAttribute("background-color", "aqua");
+    // }
+    // function newColor() {
+    //     var menu = document.getElementById("menu");
+    //     menu.style["background-color"] = "aqua";
+        // menu.setAttribute("background-color", "aqua");
+    // }
+    // function oldColor() {
+    //     var menu = document.getElementById("menu");
+    //     menu.style["background-color"] = "bisque";
+        // menu.setAttribute("background-color", "aqua");
+    // }
 
 </script>
 
